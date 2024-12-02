@@ -1,0 +1,18 @@
+config { 
+    type:"table",
+    description:"list information on the coffee shop",
+    columns: {
+        coffee_name:"type of coffee in the shop",
+        money:"amount paid in the coffee shop",
+        cash_type:"type of paiement use in the coffee shop",
+    }
+}
+-- lister les produits commandé supérieur a la moyenne des 
+-- des produits commandé dans le shop 
+SELECT 
+    coffee_name AS type_cafe,
+    money AS montant, 
+    cash_type AS type_paiement
+FROM
+    `data_coffee_sales.coffee-sales`
+    
