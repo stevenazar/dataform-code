@@ -1,0 +1,8 @@
+defaultProject: trail-project
+defaultLocation: US
+defaultDataset: dataform
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.0
+vars:
+  env: "dev"
+  project: "analyze-data_coffee-sales"

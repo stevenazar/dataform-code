@@ -1,0 +1,21 @@
+config {
+    type:"table", 
+    schema:"data_coffee_sales",
+    description:"second code"
+}
+
+
+CREATE OR REPLACE TEMP TABLE temp_table AS 
+SELECT 
+    EXTRACT(YEAR FROM date) AS year, 
+    SUM(money) OVER(PARTITION BY EXTRACT(YEAR FROM date))
+    AS total_amount
+FROM 
+    `data_coffee_sales.coffee-sales`;
+
+
+
+SELECT 
+    year, 
+    total_amount
+FROM temp_table
